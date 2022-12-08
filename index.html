@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <title>Money Calculator</title>
+  <!-- Favicon HERE -->
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+
+<body class="money">
+  <div class="wrapper">
+    <div class="container" id="topContainer">
+      <div class="title">How much money?</div>
+      <div class="inputContainer">
+        <span>$</span>
+        <input onkeyup="calculateBill()" type="text" id="billTotalInput" placeholder="0.00" />
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="title">How much percentage?</div>
+      <div class="inputContainer">
+        <span>%</span>
+        <input onkeyup="calculateBill()" type="text" id="tipInput" placeholder="10" />
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="totalContainer">
+      <div class="title">💰 Total Money Left 💰</div>
+      <div class="total" id="perPersonTotal" style="text-align:center" style="left:50%">$0.00</div>
+    </div>
+  </div>
+  </div>
+  
+<div id="vanta-canvas"></div>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js">
+</script> 
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js">
+</script>
+  <script type="text/javascript" src="script.js">
+    VANTA.RINGS({
+      el: "#vanta-canvas", 
+      mouseControls: true, 
+      touchControls: true, 
+      gyroControls: false, 
+      minHeight: 200.00, 
+      minWidth: 200.00, 
+      scale: 1.00, 
+      scaleMobile: 1.00, 
+      backgroundAlpha: 0.00
+    })
+  </script>
+</body>
+
+</html>
